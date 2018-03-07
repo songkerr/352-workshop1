@@ -94,8 +94,8 @@ header h3 {
 }
 
 .section1 > div {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: auto;
+    width: 75vh;
     padding-top: 40vh;
 }
 
@@ -105,7 +105,7 @@ header h3 {
 }
 
 .body-flex {
-    width: 80vw;
+    width: 75vw;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -113,14 +113,15 @@ header h3 {
 }
 
 .body-flex > div {
+    max-height: 500px;
     margin: auto;
 }
 
 .body-flex > div > img {
-    height: 300px;
+    height: 80%;
     flex-grow: 1;
-    margin: 12px;
     padding-top: 25vh;
+    margin: auto;
 }
 
 @media(max-width: 950px) {
