@@ -1,15 +1,12 @@
 <!--
-    - This block is a comment in HTML -
     HTML5 Responsive Web Design Template
     by Stefan Schultz
     for MDDN 352: Mobile Media (T1 2018)
-    - If you use this template, remove most of the comments for production, or minify your HTML. -
-    Want a quick overview of all HTML tags? Cheatsheet here: https://html.com/wp-content/uploads/html-cheat-sheet.pdf
 -->
 
 <html lang="en">
     <head>
-        <title>Technical Exercise</title>
+        <title>Responsive Website</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="media/favicon.png" />
@@ -20,26 +17,17 @@
     </head>
 
     <body>
-        <div class="mobile-notifier">
-            error
-        </div>
-
         <section class="hero">
-            <!-- We've given this section a class; so we can give it unique styling with CSS later, by selecting the class name. -->
             <div class="scrim">
-                <!-- A div (or division) lets us split the page into chunks that can be worked with and styled more specifically. In this case, we're nesting text inside a div, so we can create an effect in CSS that makes the text more readable. -->
                 <h2>DEMO</h2>
+                <a href="#gallery" class="smoothScroll">
+                    <p>V</p>
+                </a>
             </div>
         </section>
 
         <section class="section1">
-            <div class="body-text">
-                <p> Lorem ipsum filler text to fill in a space, and give an example of a paragraph in HTML. <strong>Using "strong" tags, you can make bold text,</strong>, or <em>"em" tags for italics - emphasis</em>. We can then style with CSS should we need to - and you can pick out the strong or em tags individually to style them, to.<br /> <br /> There is a break tag to create a new paragraph with a line break before this line. Everything should resize and reshape neatly when we resize the window, and change the viewport dimensions.</p>
-            </div>
-        </section>
-
-        <section class="section2">
-            <!-- Let's make another "normal" body section, but this time we'll split it into 3 columns, and make it evenly resize and reflow by using Flexbox. -->
+            <a name="gallery"></a>
             <div class="body-flex">
                 <div>
                     <img src="img/1c.jpg">
@@ -52,24 +40,11 @@
                 </div>
             </div>
         </section>
-
-        <!-- This is the footer, which we can stick to the bottom of every page in CSS. Having a footer is best practice, as a place to put credits + copyright, and additional links. It is also a desigend way to note there is no more content on this page. -->
-        <footer>
-            <h5>&copy; 2018. All rights reserved.</h5> <!-- "&copy;" is an HTML character code for the copyright sign. Using these ensures special characters render correctly across platforms. -->
-        </footer>
-
-        <!--
-            At the very bottom of the body - so it's the last items to load (as they're often the slowest, and not needed for basic content) are the script tag links for any Javascript or plugins you're loading.
-            We're going to load the jQuery library (a nice easy way to select things in Javascript), and a custom script document.
-        -->
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
         <script src="scripts/script.js"></script>
+        <script type="text/javascript" src="scripts/smoothscroll.js"></script>
 
     </body>
-
-    <!--
-        Don't forget to close out your body and HTML tags, so the browser knows this document ends, and it can render everything correctly.
-        Now we'll take a look at CSS - in css/main.css
-    -->
 
 </html>

@@ -1,12 +1,9 @@
-/*  This is a comment in CSS.
+/* 
     HTML5 Responsive Web Design Template
     by Stefan Schultz
     for MDDN 352: Mobile Media (T1 2018)
-    - If you use this template, remove most of the comments for production, or minify your HTML. -
 */
 
-
-/* -------- Base styles - these will always apply, no matter what. -------- */
 
 html {
     font-family: 'Lato', sans-serif;
@@ -20,50 +17,13 @@ body {
     width: 100%;
 }
 
-
-header h3 {
-    /* Now we have selected every h3 element that is a child of a header element, so we can style them uniquely. */
-    color: white;
-    font-size: 1.6rem;
-    /* This sets the header h3 text to be 1.6x the base size we declared on the HTML (16px). "rem" is a relative measurement, which works as a multiplier to a base size you set on all HTML. This makes resizing for accessibility/different screen sizes and layouts very easy.*/
-    text-align: center;
-}
-
-.mobile-notifier {
-    display: none;
-    /*
-        Setting display to "none" here will hide this element by default. We can then show it later, when specific conditions are met.
-        We're still declaring the base styles here though, in case we want to use the element in different places later.
-     */
-
-    position: absolute;
-    /* This sets the element's position to "absolute", which means it is positioned in a fixed position of the browser viewport, and will not move with other elements. This can cause issues with layout at different screen sizes, or if you add more content, so use with care, and as little as possible. */
-
-    top: 8px;
-    right: 5px;
-    /* Absolute positioning lets us use these edge values for positioning in the same way as fixed positioning. */
-
-    color: rgba(200,50,42,0.8);
-    font-weight: 800;
-    /* Font-weight is how we make text lighter, or more bold. You can use keywords, or numerical values from 100 - 900 (round to the hundred). 100 is the lightest possible weight, 900 the boldest. Not all fonts provide all weights, so some trial and error is best here. */
-
-    border: solid 4px rgba(200,50,42,0.8);
-    /* This puts an even border all the way around the element - a solid line (you can also use "dashed"), that is 4px thick (you can use any CSS values here), and with the colour rgba(200,50,42,0.8) - so it's also slightly translucent. */
-
-    padding: 5px 10px 5px 10px;
-    /* This lets you put additional spacing around an element or text, to style or lay it out better. You can use it in the same way as border, (padding-left, padding-right, etc.), or like this- padding: top, right, bottom, left.  */
-
-    border-radius: 8px;
-    /* This makes the corners of the shape rounded, by the value declared. It is always an even quarter circle rounding, so if you set the value high enough, it can be used to make a circle from a square in CSS. */
-
-}
-
 .hero {
     height: 100vh;
     background-image: url('../img/3.png');
     background-position: center;
     background-repeat: none;
     background-size: cover;
+    transition: .5s;
     
 }
 
@@ -87,85 +47,58 @@ header h3 {
     font-size: 3rem;
 }
 
+.scrim > a {
+    position: relative;
+    text-align: center;
+    top: 35vh;
+    color: white;
+    text-decoration: none;
+}
+
 .section1 {
     height: 100vh;
-    line-height: 1.8rem;
-    text-align: center;
-}
-
-.section1 > div {
-    margin: auto;
-    width: 75vh;
-    padding-top: 40vh;
-}
-
-.section2 {
-    height: 100vh;
-    margin-bottom: 100px;
 }
 
 .body-flex {
-    width: 75vw;
+    width: 75%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 120px;
 }
 
 .body-flex > div {
-    max-height: 500px;
+    height: 50vh;
     margin: auto;
+    padding-top: 28vh;
 }
 
 .body-flex > div > img {
     height: 80%;
     flex-grow: 1;
-    padding-top: 25vh;
-    margin: auto;
+    margin: 10px;
 }
 
-@media(max-width: 950px) {
+@media(max-width: 1024px) {
+    .hero {
+        background-image: url('../img/1.JPG');
+        transition: .5s;
+    } 
     
-    .body-flex > div > img {
-        padding-top: 4vh;
+    .body-flex > div {
+        padding-top: 12vh;
+    } 
+}
+
+@media(max-width: 414px) {
+    .hero {
+        background-image: url('../img/2.JPG');
+        transition: .5s;
     }
     
-}
-
-
-a {
-    text-decoration: none;
-    /* This removes the default underline from any link on the page. */
-
-    color: inherit;
-    /* This tells every "a" tag element to match its colour to its parent - in this case that is coming from the property we set on the entire HTML. You can use "inherit" for most CSS properties, to tell them to take the value of their parent. */
-}
-
-}
-
-
-footer {
-    position: absolute;
-    /* This lets us place an element very specifically, independent of all other elements - it removes it from "the flow", in correct speak. */
-
-    margin-top: 100px;
-    left: 0;
-    right: 0;
-    height: 80px;
-
-    overflow: hidden;
-    /* This tells the browser to cut off everything that falls outside this element, and not let the user scroll to it. */
-
-    color: rgb(70,70,85);
-
-    border-top: solid 1px rgb(0,117,215);
-    /* This sets a border on the element, but only on the top. You can have seperate borders for each side, or declare for all with just "border". */
-
-    background-color: #d4d4f5;
-}
-
-footer h5 {
-    margin-left: 10%;
-}
-
+    .body-flex > div {
+        padding-top: 8vh;
+    }
+    
 }
